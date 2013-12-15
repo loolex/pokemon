@@ -1,0 +1,8 @@
+<h1>
+	<%= @pokemon.name %>
+</h1>
+<img src="/images/<%= @pokemon.id %>.jpg"/>
+<p>
+	Pour tuer le Pokemon, cliquez ici :
+	<a href="/destroy/pokemons/<%= @pokemon.id %>">BIMM!</a>
+</p>

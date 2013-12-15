@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+	<title>Pokemon, attrappez les tous !</title>
+</head>
+
+<body>
+<table>
+	<caption>Listing of Pokémons</caption>
+	<thead>
+	<tr>
+		<th>Name</th>
+		<th>Element</th>
+		<th>Nom du Dresseur</th>
+		<th>URL du dresseur</th>
+	</tr>
+</thead>
+
+<tbody>
+		<% @pokemons.map do |p| %>
+	<tr>
+			<td>
+				<a href="/pokemons/<%= p.id %>">
+					<%= p.name %>
+				</a>
+			</td>
+			<td>
+				<%= p.element %>
+			</td>
+			<td>
+				<%= p.dresseur.name %>
+			</td>
+			<td>
+				<%= p.dresseur.url %>
+			</td>
+	</tr>
+		<% end %>
+</tbody>
+</table>
+
+</body>
+</html>
